@@ -1,13 +1,6 @@
-import BackgroundImage from "../../BackgroundImage";
+import BackgroundImage from "../../components/BackgroundImage";
 import background from "../../../../../public/images/background-test.jpg";
 import LeftSide from "./LeftSide";
-
-const ImageProps = {
-  src: "/images/background-test.jpg",
-  alt: "Hero Image",
-  width: 1000,
-  height: 800,
-};
 
 export default function HeroSection() {
   return (
