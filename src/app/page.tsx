@@ -1,11 +1,11 @@
-import HeroSection from "./ui/sections/heroSection";
-import SecondSection from "./ui/sections/aboutUs";
+import { SECTIONS } from "./lib/definitions";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <HeroSection/>
-      <SecondSection/>
+      {SECTIONS.map(({ component, id }) => (
+        <div key={id}>{component}</div>
+      ))}
     </main>
   );
 }
