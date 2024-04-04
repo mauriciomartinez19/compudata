@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isHidden = isOpen ? "block" : "hidden";
   return (
-    <nav className="fixed bg-white border-gray-200 dark:bg-slate-200/75 w-dvw">
+    <nav className="fixed bg-white border-gray-200 dark:bg-slate-200/75 w-dvw z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
