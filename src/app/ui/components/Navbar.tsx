@@ -7,9 +7,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isHidden = isOpen ? "block" : "hidden";
   return (
-    <nav className="fixed bg-white border-gray-200 dark:bg-slate-200/75 w-dvw z-10">
+    <nav className="fixed border-gray-200 w-dvw z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <div className="flex items-center space-x-3 rtl:space-x-reverse">
+        <div className="flex items-center">
           <Image
             src="/images/logo-compudata.png"
             className="h-8"
@@ -33,9 +33,6 @@ const Navbar = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
@@ -64,7 +61,7 @@ const Label = ({ name, id }: LabelProps) => {
     <li>
       <a
         href={`#${id}`}
-        className="block py-2 px-3 text-black rounded hover:bg-gray-300 md:hover:bg-transparent md:p-0"
+        className="font-bold block py-2 px-3 text-black rounded hover:bg-gray-300 md:hover:bg-transparent md:p-0"
         aria-current="page"
       >
         {name}
