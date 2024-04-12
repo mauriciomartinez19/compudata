@@ -25,3 +25,22 @@ body {
     text-wrap: balance;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  animation-name: colorAnimation;
+  animation-duration: 1ms;
+  animation-timeline: scroll();
+}
+
+@keyframes colorAnimation {
+  from {
+    background-color: rgb(255 255 255 / 65%);
+  }
+  to {
+    background-color: rgb(255 255 255);
+  }
+}
