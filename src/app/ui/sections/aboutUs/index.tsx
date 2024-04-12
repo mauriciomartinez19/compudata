@@ -4,7 +4,7 @@ const AboutUs = ({id}:{id:string}) => {
   return (
     <section className="bg-white w-dvw text-black" id={id}>
       <FancyBackground>
-        <div className="mx-auto max-w-6xl py-24 sm:py-40 lg:py-50 px-12 flex gap-20 flex-col">
+        <div className="mx-auto max-w-6xl py-24 sm:py-40 lg:py-50 px-12 flex gap-20 flex-col come-in">
           <div className="flex gap-8 flex-col">
             <h1 className="text-5xl font-bold text-center">Sobre nosotros</h1>
             <p className=" text-center">
