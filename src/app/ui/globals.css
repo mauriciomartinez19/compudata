@@ -44,3 +44,114 @@ nav {
     background-color: rgb(255 255 255);
   }
 }
+
+.fade-out {
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit -200px;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.come-in {
+  animation: come-in;
+  animation-timeline: scroll();
+  animation-duration: 1ms;
+  animation-range-start: 0;
+}
+
+@keyframes come-in {
+  0% {
+    transform: translate(0, -150px);
+    opacity: 0.5;
+    scale: .8;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+
+/* .fall p{
+  transform: translateY(-50vh);
+  animation: fall 2s forwards;
+  opacity: 0.3;
+  --baseTime: 0.2s;
+}
+
+.fall div:nth-child(1) {
+  --baseDelay: 0s;
+}
+.fall div:nth-child(2) {
+  --baseDelay: 1.6s; 
+}
+.fall div:nth-child(3) {
+  --baseDelay: 3.8s;
+}
+
+.fall p:nth-child(1) {
+  animation-delay: calc(var(--baseTime) * 1 + var(--baseDelay));
+}
+.fall p:nth-child(2) {
+  animation-delay: calc(var(--baseTime) * 2 + var(--baseDelay));
+}
+.fall p:nth-child(3) {
+  animation-delay: calc(var(--baseTime) * 3 + var(--baseDelay));
+}
+.fall p:nth-child(4) {
+  animation-delay: calc(var(--baseTime) * 4 + var(--baseDelay));
+}
+.fall p:nth-child(5) {
+  animation-delay: calc(var(--baseTime) * 5 + var(--baseDelay));
+}
+.fall p:nth-child(6) {
+  animation-delay: calc(var(--baseTime) * 6 + var(--baseDelay));
+}
+.fall p:nth-child(7) {
+  animation-delay: calc(var(--baseTime) * 7 + var(--baseDelay));
+}
+.fall p:nth-child(8) {
+  animation-delay: calc(var(--baseTime) * 8 + var(--baseDelay));
+}
+.fall p:nth-child(9) {
+  animation-delay: calc(var(--baseTime) * 9 + var(--baseDelay));
+}
+.fall p:nth-child(10) {
+  animation-delay: calc(var(--baseTime) * 10 + var(--baseDelay));
+}
+.fall p:nth-child(11) {
+  animation-delay: calc(var(--baseTime) * 11 + var(--baseDelay));
+}
+.fall p:nth-child(12) {
+  animation-delay: calc(var(--baseTime) * 12 + var(--baseDelay));
+}
+.fall p:nth-child(13) {
+  animation-delay: calc(var(--baseTime) * 13 + var(--baseDelay));
+}
+.fall p:nth-child(14) {
+  animation-delay: calc(var(--baseTime) * 14 + var(--baseDelay));
+} */
+
+.fall {
+  transform: translateY(-20vh);
+  animation: fall 1s forwards;
+  opacity: 0.3;
+}
+
+
+@keyframes fall {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
