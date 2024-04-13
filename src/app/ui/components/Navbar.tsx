@@ -7,8 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isHidden = isOpen ? "block" : "hidden";
   return (
-    <nav className="fixed border-gray-200 w-dvw z-10 bg-white">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="fixed border-gray-200 w-dvw z-10 bg-white flex items-center">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 w-dvw">
         <div className="flex items-center">
           <Image
             src="/images/logo-compudata.png"
