@@ -39,11 +39,11 @@ nav {
 
 @keyframes colorAnimation {
   from {
-    background-color: rgb(255 255 255 / 65%);
+    background-color: rgb(112 71 152 / 0%);
     height: 90px;
   }
   to {
-    background-color: rgb(255 255 255);
+    background-color: rgb(112 71 152 / 92%);
     height: 65px;
   }
 }

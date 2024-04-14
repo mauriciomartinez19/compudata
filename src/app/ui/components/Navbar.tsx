@@ -21,7 +21,7 @@ const Navbar = () => {
         <button
           data-collapse-toggle="N-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
@@ -61,7 +61,7 @@ const Label = ({ name, id }: LabelProps) => {
     <li>
       <a
         href={`#${id}`}
-        className="font-bold block py-2 px-3 text-black rounded hover:bg-gray-300 md:hover:bg-transparent md:p-0"
+        className="font-bold block py-2 px-3 text-white rounded hover:bg-gray-300 md:hover:bg-transparent md:p-0"
         aria-current="page"
       >
         {name}

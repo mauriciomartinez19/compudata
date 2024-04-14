@@ -2,10 +2,10 @@ const LeftSide = () => {
   return (
     <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 px-12 fall">
       <div className="text-center md:text-left fade-out">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl">
           Tu Socio Confiable en Tecnología
         </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
+        <p className="mt-6 text-lg leading-8 text-white-600">
           Encuentra todo lo que necesitas para potenciar tu mundo digital. Desde
           PCs y notebooks hasta impresoras, teclados y ratones de primera
           calidad. Además, confía en nuestro equipo de expertos para mantener
