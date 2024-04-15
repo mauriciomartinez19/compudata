@@ -1,6 +1,8 @@
 import BackgroundImage from "../../components/BackgroundImage";
 import background from "../../../../../public/images/purple-background.jpg";
 import LeftSide from "./LeftSide";
+import RightSide from "./RightSide";
+
 
 export default function HeroSection({ id }: { id: string }) {
   return (
@@ -8,7 +10,7 @@ export default function HeroSection({ id }: { id: string }) {
       <BackgroundImage src={background}>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <LeftSide />
-          {/* <div></div> */}
+          <RightSide/>
         </div>
       </BackgroundImage>
     </section>
