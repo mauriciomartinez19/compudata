@@ -7,8 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isHidden = isOpen ? "block" : "hidden";
   return (
-    <nav className="fixed border-gray-200 w-dvw z-10 bg-white">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="fixed border-gray-200 w-dvw z-10 bg-white flex items-center">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 w-dvw">
         <div className="flex items-center">
           <Image
             src="/images/logo-compudata.png"
@@ -21,7 +21,7 @@ const Navbar = () => {
         <button
           data-collapse-toggle="N-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
@@ -61,7 +61,7 @@ const Label = ({ name, id }: LabelProps) => {
     <li>
       <a
         href={`#${id}`}
-        className="font-bold block py-2 px-3 text-black rounded hover:bg-gray-300 md:hover:bg-transparent md:p-0"
+        className="font-bold block py-2 px-3 text-white rounded hover:bg-gray-300 md:hover:bg-transparent md:p-0"
         aria-current="page"
       >
         {name}
