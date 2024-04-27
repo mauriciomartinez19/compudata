@@ -6,6 +6,17 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --card1-gradient-color1: #f12711;
+  --card1-gradient-color2: #f5af19;
+  --card2-gradient-color1: #7F00FF;
+  --card2-gradient-color2: #E100FF;
+  --card3-gradient-color1: #3f2b96;
+  --card3-gradient-color2: #a8c0ff;
+  --card4-gradient-color1: #11998e;
+  --card4-gradient-color2: #38ef7d;
+  --violet-background: rgba(128,119,203,1);
+  --purple-background: rgba(180,4,221,0.88);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,67 +94,6 @@ nav {
   }
 }
 
-
-/* .fall p{
-  transform: translateY(-50vh);
-  animation: fall 2s forwards;
-  opacity: 0.3;
-  --baseTime: 0.2s;
-}
-
-.fall div:nth-child(1) {
-  --baseDelay: 0s;
-}
-.fall div:nth-child(2) {
-  --baseDelay: 1.6s; 
-}
-.fall div:nth-child(3) {
-  --baseDelay: 3.8s;
-}
-
-.fall p:nth-child(1) {
-  animation-delay: calc(var(--baseTime) * 1 + var(--baseDelay));
-}
-.fall p:nth-child(2) {
-  animation-delay: calc(var(--baseTime) * 2 + var(--baseDelay));
-}
-.fall p:nth-child(3) {
-  animation-delay: calc(var(--baseTime) * 3 + var(--baseDelay));
-}
-.fall p:nth-child(4) {
-  animation-delay: calc(var(--baseTime) * 4 + var(--baseDelay));
-}
-.fall p:nth-child(5) {
-  animation-delay: calc(var(--baseTime) * 5 + var(--baseDelay));
-}
-.fall p:nth-child(6) {
-  animation-delay: calc(var(--baseTime) * 6 + var(--baseDelay));
-}
-.fall p:nth-child(7) {
-  animation-delay: calc(var(--baseTime) * 7 + var(--baseDelay));
-}
-.fall p:nth-child(8) {
-  animation-delay: calc(var(--baseTime) * 8 + var(--baseDelay));
-}
-.fall p:nth-child(9) {
-  animation-delay: calc(var(--baseTime) * 9 + var(--baseDelay));
-}
-.fall p:nth-child(10) {
-  animation-delay: calc(var(--baseTime) * 10 + var(--baseDelay));
-}
-.fall p:nth-child(11) {
-  animation-delay: calc(var(--baseTime) * 11 + var(--baseDelay));
-}
-.fall p:nth-child(12) {
-  animation-delay: calc(var(--baseTime) * 12 + var(--baseDelay));
-}
-.fall p:nth-child(13) {
-  animation-delay: calc(var(--baseTime) * 13 + var(--baseDelay));
-}
-.fall p:nth-child(14) {
-  animation-delay: calc(var(--baseTime) * 14 + var(--baseDelay));
-} */
-
 .fall {
   transform: translateY(-20vh);
   animation: fall 1s forwards;
@@ -158,3 +108,49 @@ nav {
   }
 }
 
+.card-header{
+  height: 200px;
+  width: 100%;
+  background: red;
+  border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;
+  display: grid;
+  place-items: center;
+
+}
+
+.card-background-one{
+  background: linear-gradient(to left, var(--card2-gradient-color1), var(--card2-gradient-color2));
+}
+.card-background-two{
+  background: linear-gradient(to left, var(--card3-gradient-color1), var(--card3-gradient-color2));
+}
+.card-background-three{
+  background: linear-gradient(to left, var(--card4-gradient-color1), var(--card4-gradient-color2));
+}
+
+.violet-bg {
+  background: rgb(128,119,203);
+  background: linear-gradient(124deg, var(--violet-background) 30%, var(--purple-background)  61%);
+}
+
+.appear {
+  animation: appear .1s forwards;
+  animation-timeline: view();
+  animation-range: -50px;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(.9);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.9);
+    opacity: .7;
+  }
+}
