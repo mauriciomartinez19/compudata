@@ -1,6 +1,15 @@
-import AboutUs from "../ui/sections/aboutUs";
-import HeroSection from "../ui/sections/heroSection";
-import Services from "../ui/sections/services";
+import { ComponentType } from "react";
+import dynamic from 'next/dynamic'
+
+const HeroSection = dynamic(()=>import("../ui/sections/heroSection"), {
+  loading: ()=> <div>Loading...</div>
+})
+const AboutUs = dynamic(()=>import("../ui/sections/aboutUs"), {
+  loading: ()=> <div>Loading...</div>
+})
+const Services = dynamic(()=>import("../ui/sections/services"), {
+  loading: ()=> <div>Loading...</div>
+})
 
 interface Section {
   name: string;
@@ -8,7 +17,7 @@ interface Section {
   component: JSX.Element;
 }
 
-const createSection = (name: string, id: string, Component: React.FC<{ id: string }>): Section => {
+const createSection = (name: string, id: string, Component: ComponentType<{ id: string }>): Section => {
   return {
     name,
     id,
