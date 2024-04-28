@@ -17,6 +17,8 @@
   --violet-background: rgba(128,119,203,1);
   --purple-background: rgba(180,4,221,0.88);
   --nav-background: rgba(112, 71, 152, 1);
+  --footer-background: rgb(64 39 89);
+  --section-background: rgb(85 64 112);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +27,14 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+.section-violet-bg {
+  background: var(--section-background)
+}
+
+.dark-violet-bg {
+  background: var(--footer-background)
 }
 
 body {
@@ -42,11 +52,15 @@ html {
 }
 
 nav {
-  animation-name: colorAnimation;
-  animation-duration: 1ms;
-  animation-timeline: scroll();
   height: 65px;
   background-color: var(--nav-background);
+}
+
+.scroll-down {
+  animation-name: colorAnimation;
+  animation-duration: 1ms;
+  animation-timeline: scroll(y root);
+  animation-range-end: 200px;
 }
 
 @keyframes colorAnimation {
@@ -60,11 +74,7 @@ nav {
   }
 }
 
-.fade-out {
-  animation: fade-out linear;
-  animation-timeline: view();
-  animation-range: exit -200px;
-}
+
 
 @keyframes fade-out {
   from {
@@ -75,12 +85,16 @@ nav {
   }
 }
 
-.come-in {
-  animation: come-in;
-  animation-timeline: scroll();
-  animation-duration: 1ms;
-  animation-range-start: 0;
+@supports (animation-timeline: scroll()) {
+  .come-in {
+    animation: come-in;
+    animation-timeline: scroll();
+    animation-duration: 1ms;
+    animation-range-start: 0;
+  }
 }
+
+
 
 @keyframes come-in {
   0% {
@@ -133,11 +147,19 @@ nav {
   background: linear-gradient(124deg, var(--violet-background) 30%, var(--purple-background)  61%);
 }
 
-.appear {
-  animation: appear .1s forwards;
-  animation-timeline: view();
-  animation-range: -50px;
+@supports (animation-timeline: view()) {
+  .appear {
+    animation: appear .1s forwards;
+    animation-timeline: view();
+    animation-range: -50px;
+  }
+  .fade-out {
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -200px;
+  }
 }
+
 
 @keyframes appear {
   0% {
@@ -149,6 +171,13 @@ nav {
     transform: translateY(0px);
     transform: scale(1);
   }
+
+  75% {
+    opacity: 1;
+    transform: translateY(0px);
+    transform: scale(1);
+  }
+
   100% {
     transform: scale(.9);
     opacity: .7;
