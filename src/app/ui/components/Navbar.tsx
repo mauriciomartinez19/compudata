@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="fixed border-gray-200 w-dvw z-10 flex items-center">
+    <nav className="fixed border-gray-200 w-dvw z-10 flex items-center scroll-down">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 w-dvw">
         <div className="flex items-center">
           <Image
@@ -28,8 +28,8 @@ export default Navbar;
 const Sections = () => {
   return (
     <ul className="font-medium flex flex-col p-4 md:bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:p-0">
-      {SECTIONS.map(({ name, id }, i) => (
-        <Label key={i} name={name} id={id} />
+      {SECTIONS.map(({ name, id, disabled }, i) => (
+        <Label key={i} name={name} id={id} disabled={disabled} />
       ))}
     </ul>
   );
@@ -63,14 +63,15 @@ const Dropdown = () => {
 interface LabelProps {
   name: string;
   id: string;
+  disabled?: boolean;
 }
 
-const Label = ({ name, id }: LabelProps) => {
+const Label = ({ name, id, disabled }: LabelProps) => {
   return (
     <li>
       <a
         href={`#${id}`}
-        className="font-bold block py-2 px-3 text-white rounded md:hover:bg-transparent md:p-0"
+        className={`font-bold block py-2 px-3 text-white rounded md:hover:bg-transparent md:p-0 ${disabled && "opacity-50"}`}
         aria-current="page"
       >
         {name}
