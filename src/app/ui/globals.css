@@ -16,7 +16,7 @@
   --card4-gradient-color2: #38ef7d;
   --violet-background: rgba(128,119,203,1);
   --purple-background: rgba(180,4,221,0.88);
-
+  --nav-background: rgba(112, 71, 152, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,6 +46,7 @@ nav {
   animation-duration: 1ms;
   animation-timeline: scroll();
   height: 65px;
+  background-color: var(--nav-background);
 }
 
 @keyframes colorAnimation {
@@ -54,7 +55,7 @@ nav {
     height: 90px;
   }
   to {
-    background-color: rgb(112 71 152 / 92%);
+    background-color: var(--nav-background);
     height: 65px;
   }
 }
@@ -129,7 +130,6 @@ nav {
 }
 
 .violet-bg {
-  background: rgb(128,119,203);
   background: linear-gradient(124deg, var(--violet-background) 30%, var(--purple-background)  61%);
 }
 
@@ -153,4 +153,22 @@ nav {
     transform: scale(.9);
     opacity: .7;
   }
+}
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: -1;
+  right: 0;
+  background-color: var(--nav-background);
+}
+
+.custom-dropdown:hover .custom-dropdown-content {
+  display: block;
 }
