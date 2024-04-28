@@ -11,6 +11,10 @@ const Services = dynamic(()=>import("../ui/sections/services"), {
   loading: ()=> <div>Loading...</div>
 })
 
+const Contact = dynamic(()=>import("../ui/sections/contact"), {
+  loading: ()=> <div>Loading...</div>
+})
+
 interface Section {
   name: string;
   id: string;
@@ -29,7 +33,7 @@ const createSection = (name: string, id: string, Component: ComponentType<{ id: 
 
 export const SECTIONS: Section[] = [
   createSection("Home", "home", HeroSection),
-  createSection("About", "about", AboutUs),
-  createSection("Services", "services", Services), 
-  createSection("Contact", "contact", ()=><></>, true),
+  createSection("Sobre Nosotros", "about", AboutUs),
+  createSection("Servicios", "services", Services), 
+  createSection("Catacto", "contact", Contact),
 ];
