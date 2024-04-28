@@ -15,13 +15,15 @@ interface Section {
   name: string;
   id: string;
   component: JSX.Element;
+  disabled?: boolean;
 }
 
-const createSection = (name: string, id: string, Component: ComponentType<{ id: string }>): Section => {
+const createSection = (name: string, id: string, Component: ComponentType<{ id: string }>, disabled?: boolean): Section => {
   return {
     name,
     id,
-    component: <Component id={id} />
+    component: <Component id={id} />,
+    disabled
     }
   };
 
@@ -29,5 +31,5 @@ export const SECTIONS: Section[] = [
   createSection("Home", "home", HeroSection),
   createSection("About", "about", AboutUs),
   createSection("Services", "services", Services), 
-  createSection("Contact", "contact", ()=><></>),
+  createSection("Contact", "contact", ()=><></>, true),
 ];
