@@ -9,7 +9,7 @@ interface Props {
 
 const Card = ({background, description, title, icon}:Props) => {
   return (
-    <div className="max-w-72 rounded-xl shadow-lg border-solid border-white border-4 bg-white overflow-hidden appear">
+    <div className="max-w-72 rounded-xl shadow-lg border-solid border-white border-4 bg-white overflow-hidden appear opacity-100 scale-100">
       <div className={`card-header ${background}`}>
         {icon}
       </div>
