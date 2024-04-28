@@ -71,7 +71,7 @@ const Label = ({ name, id, disabled }: LabelProps) => {
     <li>
       <a
         href={`#${id}`}
-        className={`font-bold block py-2 px-3 text-white rounded md:hover:bg-transparent md:p-0 ${disabled && "opacity-50"}`}
+        className={`font-bold block py-2 px-3 text-white rounded md:hover:bg-transparent md:p-0 ${disabled && "opacity-50 cursor-not-allowed"}`}
         aria-current="page"
       >
         {name}
