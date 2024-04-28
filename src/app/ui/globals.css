@@ -49,7 +49,8 @@ nav {
 .scroll-down {
   animation-name: colorAnimation;
   animation-duration: 1ms;
-  animation-timeline: scroll();
+  animation-timeline: scroll(y root);
+  animation-range-end: 200px;
 }
 
 @keyframes colorAnimation {
