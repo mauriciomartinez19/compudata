@@ -4,7 +4,7 @@ const FancyBackground = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="relative isolate md:px-6 pt-14 lg:px-8">
+    <div className="relative isolate pt-14 lg:px-8">
       <div
         className="absolute inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl"
         aria-hidden="true"
