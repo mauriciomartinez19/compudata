@@ -49,7 +49,7 @@ const CARDS = [
 const Services = ({ id }: { id: string }) => {
   return (
     <section className="min-h-svh w-screen violet-bg" id={id}>
-        <div className="mx-auto max-w-6xl py-24 sm:py-40 lg:py-50 px-12 flex gap-20 flex-col come-in">
+        <div className="mx-auto max-w-6xl py-24 sm:py-40 lg:py-50 px-12 flex md:gap-20 gap-4 flex-col come-in">
           <div className="flex gap-8 flex-col text-white come-in">
             <h1 className="text-5xl font-bold text-center">Servicios</h1>
             <p className=" text-center">
