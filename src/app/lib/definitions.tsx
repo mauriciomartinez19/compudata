@@ -1,9 +1,7 @@
 import { ComponentType } from "react";
 import dynamic from 'next/dynamic'
+import HeroSection  from "../ui/sections/heroSection";"../ui/sections/heroSection"
 
-const HeroSection = dynamic(()=>import("../ui/sections/heroSection"), {
-  loading: ()=> <div>Loading...</div>
-})
 const AboutUs = dynamic(()=>import("../ui/sections/aboutUs"), {
   loading: ()=> <div>Loading...</div>
 })

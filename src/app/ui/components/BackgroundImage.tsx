@@ -13,13 +13,13 @@ const BackgroundImage = ({
           className="-z-10"
           alt="Mountains"
           src={src}
-          placeholder="blur"
-          quality={100}
+          // quality={80}
           fill
           sizes="100vw"
           style={{
             objectFit: "cover",
           }}
+          priority={true}
         />
       {children}
     </div>
