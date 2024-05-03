@@ -10,6 +10,13 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Compudata",
   description: "Landing page for Compudata web site",
+  metadataBase: new URL('https://www.compudata.com.uy'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'es-ES': '/es-ES',
+    },
+  }
 };
 
 export default function RootLayout({

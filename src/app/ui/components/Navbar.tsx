@@ -5,13 +5,14 @@ const Navbar = () => {
   return (
     <nav className="fixed border-gray-200 w-dvw z-10 flex items-center scroll-down">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 w-dvw">
-        <div className="flex items-center">
+        <div className="flex items-center" style={{height: '60px', width: '180px', position: 'relative'}}>
           <Image
             src="/images/logo-compudata.png"
             className="h-8"
             alt="Compudata Logo"
-            width={180}
-            height={60}
+            fill
+            style={{objectFit: 'contain'}}
+            sizes="180px"
           />
         </div>
         <div className="hidden md:block">
@@ -42,6 +43,7 @@ const Dropdown = () => {
         data-collapse-toggle="N-default"
         type="button"
         className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg"
+        aria-label="dropdown"
       >
         <svg
           className="w-5 h-5"
