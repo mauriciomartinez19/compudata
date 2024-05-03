@@ -15,7 +15,7 @@ const Card = ({background, description, title, icon}:Props) => {
       </div>
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2 text-black">{title}</div>
-        <p className="text-gray-700 text-base">
+        <p>
           {description}
         </p>
       </div>

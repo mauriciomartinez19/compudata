@@ -42,6 +42,7 @@ const Dropdown = () => {
         data-collapse-toggle="N-default"
         type="button"
         className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg"
+        aria-label="dropdown"
       >
         <svg
           className="w-5 h-5"
