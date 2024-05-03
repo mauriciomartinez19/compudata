@@ -33,5 +33,5 @@ export const SECTIONS: Section[] = [
   createSection("Home", "home", HeroSection),
   createSection("Sobre Nosotros", "about", AboutUs),
   createSection("Servicios", "services", Services), 
-  createSection("Catacto", "contact", Contact),
+  createSection("Contacto", "contact", Contact),
 ];
