@@ -1,5 +1,9 @@
-import Map from "../../components/Map";
+import dynamic from "next/dynamic";
 import FancyBackground from "../FancyBackground";
+
+const Map = dynamic(()=>import("../../components/Map"), {
+  loading: ()=> <div>Loading...</div>
+})
 
 const Contact = ({ id }: { id: string }) => {
   return (
