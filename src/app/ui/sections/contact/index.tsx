@@ -1,9 +1,11 @@
 import dynamic from "next/dynamic";
+import EmailForm from "../../components/email/EmailForm";
 import FancyBackground from "../FancyBackground";
+import Email from "../../components/email";
 
-const Map = dynamic(()=>import("../../components/Map"), {
-  loading: ()=> <div>Loading...</div>
-})
+const Map = dynamic(() => import("../../components/Map"), {
+  loading: () => <div>Loading...</div>,
+});
 
 const Contact = ({ id }: { id: string }) => {
   return (
@@ -105,6 +107,9 @@ const Contact = ({ id }: { id: string }) => {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <Email />
           </div>
         </div>
       </FancyBackground>
