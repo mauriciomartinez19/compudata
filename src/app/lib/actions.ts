@@ -1,22 +1,28 @@
-"use server"
+"use server";
 import { sendMail } from "./utils/nodemailer";
-
-export type State = {
-  errors?: any;
-  message?: string | null;
-};
-export const createEmail = async (prevState: State, formData: FormData) => {
+import Validations from "./utils/validations";
+export interface State {
+  errors?: Record<string, string>;
+  success?: boolean;
+}
+export const createEmail = async (
+  prevState: State,
+  formData: FormData
+): Promise<State> => {
   const body = {
-    name: formData.get('name') as string,
-    replyTo: formData.get('email') as string,
-    content: formData.get('content') as string,
-    phoneNumber: formData.get('phone') as string,
-  }
+    name: formData.get("name") as string,
+    replyTo: formData.get("email") as string,
+    content: formData.get("content") as string,
+    phoneNumber: formData.get("phone") as string,
+  };
+  const { success, errors } = Validations.validateEmailForm(body);
+  console.log({ success, errors });
+  if (!success) return { success, errors };
   try {
     const mail = await sendMail(body);
     console.log({mail})
-    return {errors: {}, message: "success"}
-  }catch (e) {
-    return {errors: {e}, message: ""}
+    return { success: true };
+  } catch (e) {
+    return { errors: { serverError: "Error al enviar el email" } };
   }
 };

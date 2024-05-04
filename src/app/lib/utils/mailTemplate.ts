@@ -1,4 +1,4 @@
-import { CreateMailOptionsProps } from "@/app/lib/types/mail";
+import { CreateMailOptionsProps } from "@/app/lib/types/Mail";
 
 const template = `
 <!DOCTYPE html>

@@ -11,7 +11,7 @@ const Contact = ({ id }: { id: string }) => {
   return (
     <section id={id} className="min-h-svh w-screen section-violet-bg">
       <FancyBackground>
-        <div className="mx-auto w-screen py-24 sm:py-40 lg:py-50 md:px-12 flex md:gap-20 gap-10 flex-col come-in">
+        <div className="mx-auto w-full py-24 sm:py-40 lg:py-50 md:px-12 flex md:gap-20 gap-10 flex-col come-in">
           <div className="flex gap-8 flex-col text-white come-in">
             <h1 className="text-5xl font-bold text-center">Contacto</h1>
           </div>

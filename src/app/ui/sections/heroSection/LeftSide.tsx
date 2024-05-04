@@ -15,7 +15,7 @@ const LeftSide = () => {
         <div className="mt-10 flex items-center justify-center md:justify-start gap-x-6 cursor-pointer">
           <a
             href="tel:+59899624437"
-            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="rounded-md bg-[color:var(--button-background)] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Contáctanos
           </a>

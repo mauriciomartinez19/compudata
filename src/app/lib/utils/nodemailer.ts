@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 import { createTemplate } from "./mailTemplate";
-import { CreateMailOptionsProps } from "../types/mail";
+import { CreateMailOptionsProps } from "../types/Mail";
 
 const username = process.env.BURNER_USERNAME;
 const password = process.env.BURNER_PASSWORD;
