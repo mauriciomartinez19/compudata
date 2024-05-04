@@ -16,13 +16,13 @@ export const createEmail = async (
     phoneNumber: formData.get("phone") as string,
   };
   const { success, errors } = Validations.validateEmailForm(body);
-  console.log({ success, errors });
   if (!success) return { success, errors };
   try {
     const mail = await sendMail(body);
     console.log({mail})
     return { success: true };
   } catch (e) {
+    console.log({e})
     return { errors: { serverError: "Error al enviar el email" } };
   }
 };

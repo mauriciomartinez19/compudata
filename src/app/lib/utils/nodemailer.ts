@@ -35,5 +35,6 @@ const transporter = nodemailer.createTransport({
 
 export const sendMail = async (options: CreateMailOptionsProps) => {
   const mailOptions = createMailOptions(options);
+  console.log({mailOptions})
   return await transporter.sendMail(mailOptions);
 };
