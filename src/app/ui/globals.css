@@ -19,6 +19,7 @@
   --nav-background: rgba(112, 71, 152, 1);
   --footer-background: rgb(64 39 89);
   --section-background: rgb(85 64 112);
+  --button-background: #4f45e5
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,7 +60,7 @@ nav {
 .scroll-down {
   animation-name: colorAnimation;
   animation-duration: 1ms;
-  animation-timeline: scroll(y root);
+  animation-timeline: scroll();
   animation-range-end: 200px;
 }
 
@@ -85,12 +86,13 @@ nav {
   }
 }
 
-@supports (animation-timeline: scroll()) {
+@supports (animation-timeline: view()) {
   .come-in {
     animation: come-in;
-    animation-timeline: scroll();
+    animation-timeline: view();
     animation-duration: 1ms;
-    animation-range-start: 0;
+    animation-range-start: -300px;
+    animation-range-end: 800px;
   }
 }
 
