@@ -8,7 +8,7 @@ const BackgroundImage = ({
   src: StaticImageData
 }>) => {
   return (
-    <div className="relative w-screen">
+    <div className="relative w-screen h-screen">
         <Image
           className="-z-10"
           alt="Mountains"

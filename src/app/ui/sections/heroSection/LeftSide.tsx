@@ -1,6 +1,6 @@
 const LeftSide = () => {
   return (
-    <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 px-12 fall">
+    <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 px-12 fall items-center">
       <div className="text-center md:text-left fade-out">
         <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl">
           Tu Socio Confiable en Tecnología
@@ -15,7 +15,7 @@ const LeftSide = () => {
         <div className="mt-10 flex items-center justify-center md:justify-start gap-x-6 cursor-pointer">
           <a
             href="tel:+59899624437"
-            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="rounded-md bg-[color:var(--button-background)] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Contáctanos
           </a>
