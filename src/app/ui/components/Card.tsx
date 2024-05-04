@@ -13,8 +13,8 @@ const Card = ({background, description, title, icon}:Props) => {
       <div className={`card-header ${background}`}>
         {icon}
       </div>
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2 text-black">{title}</div>
+      <div className="px-6 py-4 text-black">
+        <div className="font-bold text-xl mb-2 ">{title}</div>
         <p>
           {description}
         </p>

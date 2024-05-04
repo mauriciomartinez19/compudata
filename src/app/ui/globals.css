@@ -60,7 +60,7 @@ nav {
 .scroll-down {
   animation-name: colorAnimation;
   animation-duration: 1ms;
-  animation-timeline: scroll(y root);
+  animation-timeline: scroll();
   animation-range-end: 200px;
 }
 
@@ -86,12 +86,13 @@ nav {
   }
 }
 
-@supports (animation-timeline: scroll()) {
+@supports (animation-timeline: view()) {
   .come-in {
     animation: come-in;
-    animation-timeline: scroll();
+    animation-timeline: view();
     animation-duration: 1ms;
-    animation-range-start: 0;
+    animation-range-start: -300px;
+    animation-range-end: 800px;
   }
 }
 
