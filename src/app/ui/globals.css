@@ -197,3 +197,14 @@ nav {
 .custom-dropdown:hover .custom-dropdown-content {
   display: block;
 }
+
+.custom-dropdown-content::after {
+  content: '';
+  position: absolute;
+  top: -18px;
+  right: 1px;
+  transform: translateX(-50%);
+  border-width: 9px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+}
