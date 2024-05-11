@@ -20,7 +20,7 @@ const CARDS = [
     background: "card-background-two",
     title: "Service Especializado",
     description:
-      "Reparación de PCs y notebooks, monitores, impresoras a chorro y laser. Configuracion e instalacion de sistemas de redes, wi-fi, cableado, extensores y repetidores de señal wi-fi.",
+      "Reparación de notebook, tablet, impresoras chorro tinta y laser, PCs, monitores. Configuracion e instalacion de sistemas de redes, wi-fi, cableado, extensores y repetidores de señal wi-fi.",
     icon: (
       <Image
         src="/images/computer.png"
