@@ -19,15 +19,8 @@
   --nav-background: rgba(112, 71, 152, 1);
   --footer-background: rgb(64 39 89);
   --section-background: rgb(85 64 112);
-  --button-background: #4f45e5
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --button-background: #4f45e5;
+  --font-color: white;
 }
 
 .section-violet-bg {
@@ -39,7 +32,8 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--font-color);
+  background-color: var(--footer-background);
 }
 
 @layer utilities {
@@ -202,4 +196,15 @@ nav {
 
 .custom-dropdown:hover .custom-dropdown-content {
   display: block;
+}
+
+.custom-dropdown-content::after {
+  content: '';
+  position: absolute;
+  top: -18px;
+  right: 1px;
+  transform: translateX(-50%);
+  border-width: 9px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
 }

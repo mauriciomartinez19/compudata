@@ -1,6 +1,6 @@
 const LeftSide = () => {
   return (
-    <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 px-12 fall items-center">
+    <div className="mx-auto max-w-2xl flex px-12 fall items-start md:items-center py-24 md:py:0 h-full">
       <div className="text-center md:text-left fade-out">
         <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl">
           Tu Socio Confiable en Tecnología
