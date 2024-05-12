@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const WhatsApp = () => {
   return (
-    <Link target="_blank" href="https://wa.me/+59899624437" className="fixed right-5 bottom-5 animate-bounce">
+    <Link target="_blank" href="https://wa.me/+59899624437" className="fixed right-5 bottom-5 animate-bounce z-10">
       <Image
         src='/images/WhatsApp.svg'
         width={60}

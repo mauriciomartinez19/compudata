@@ -23,7 +23,8 @@ export const Footer = () => {
             </div>
           </span>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0">
-            {SECTIONS.map(({ name, id, disabled }, i) => {
+            {SECTIONS.map(({ name, id, disabled, isSplitter }, i) => {
+              if (isSplitter) return null
               return (
                 <li key={i}>
                   <Link
