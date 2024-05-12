@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const BrandSlider = ({}:{id: string}) => {
   return (
-    <Slider>
+    <Slider slideWidth="180px" slideGap="40px">
       <Image
         alt="logo-brands"
         fill

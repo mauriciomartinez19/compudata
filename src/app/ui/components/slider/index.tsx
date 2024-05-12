@@ -3,11 +3,15 @@ import { CSSProperties, Children } from "react";
 
 interface Props {
   children: React.ReactNode;
+  slideWidth: string;
+  slideGap: string;
 }
 
-const Slider = ({ children }: Props) => {
+const Slider = ({ children, slideWidth, slideGap }: Props) => {
   const style = {
     "--logos-quantity": Children.count(children),
+    "--slider-logo-width": slideWidth,
+    "--slider-gap": slideGap
   } as CSSProperties;
   return (
     <div style={style} className="slider-container">
