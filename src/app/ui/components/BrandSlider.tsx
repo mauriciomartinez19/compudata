@@ -1,7 +1,7 @@
 import Slider from "./slider";
 import Image from "next/image";
 
-const BrandSlider = () => {
+const BrandSlider = ({}:{id: string}) => {
   return (
     <Slider>
       <Image

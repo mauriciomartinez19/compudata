@@ -13,25 +13,32 @@ const Contact = dynamic(()=>import("../ui/sections/contact"), {
   loading: ()=> <div>Loading...</div>
 })
 
+const BrandSlider = dynamic(()=>import("../ui/components/BrandSlider"), {
+  loading: ()=> <div>Loading...</div>
+})
+
 interface Section {
   name: string;
   id: string;
   component: JSX.Element;
+  isSplitter?: boolean;
   disabled?: boolean;
 }
 
-const createSection = (name: string, id: string, Component: ComponentType<{ id: string }>, disabled?: boolean): Section => {
+const createSection = (name: string, id: string, Component: ComponentType<{ id: string }>, isSplitter?: boolean, disabled?: boolean): Section => {
   return {
     name,
     id,
     component: <Component id={id} />,
-    disabled
+    disabled,
+    isSplitter
     }
   };
 
 export const SECTIONS: Section[] = [
   createSection("Home", "home", HeroSection),
   createSection("Sobre Nosotros", "about", AboutUs),
-  createSection("Servicios", "services", Services), 
+  createSection("Servicios", "services", Services),
+  createSection("Brand Slider", "brand-slider", BrandSlider, true),
   createSection("Contacto", "contact", Contact),
 ];

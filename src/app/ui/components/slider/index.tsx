@@ -14,13 +14,13 @@ const Slider = ({ children }: Props) => {
       <div className="slider-wrapper">
         <div className="flex logos-wrapper">
           <div className="slider-first-slide">
-            {Children.map(children, (child) => {
-              return <div className="logo-box"> {child} </div>;
+            {Children.map(children, (child, index) => {
+              return <div key={index} className="logo-box"> {child} </div>;
             })}
           </div>
           <div className="slider-second-slide">
-          {Children.map(children, (child) => {
-              return <div className="logo-box"> {child} </div>;
+          {Children.map(children, (child, index) => {
+              return <div key={index} className="logo-box"> {child} </div>;
             })}
           </div>
         </div>
