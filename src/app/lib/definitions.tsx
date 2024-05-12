@@ -21,6 +21,10 @@ const ContactBanner = dynamic(()=>import("../ui/components/contactBanner"), {
   loading: ()=> <div>Loading...</div>
 })
 
+const SecondBrandSlider = dynamic(()=>import("../ui/components/SecondBrandSlider"), {
+  loading: ()=> <div>Loading...</div>
+})
+
 interface Section {
   name: string;
   id: string;
@@ -43,7 +47,8 @@ export const SECTIONS: Section[] = [
   createSection("Home", "home", HeroSection),
   createSection("Contact banner", "contact-banner", ContactBanner, true),
   createSection("Sobre Nosotros", "about", AboutUs),
-  createSection("Servicios", "services", Services),
   createSection("Brand Slider", "brand-slider", BrandSlider, true),
+  createSection("Servicios", "services", Services),
+  createSection("Second Brand Slider", "second-brand-slider", SecondBrandSlider, true),
   createSection("Contacto", "contact", Contact),
 ];
