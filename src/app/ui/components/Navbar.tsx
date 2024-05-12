@@ -5,13 +5,16 @@ const Navbar = () => {
   return (
     <nav className="fixed border-gray-200 w-dvw z-10 flex items-center scroll-down">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 w-dvw">
-        <div className="flex items-center" style={{height: '60px', width: '180px', position: 'relative'}}>
+        <div
+          className="flex items-center"
+          style={{ height: "60px", width: "180px", position: "relative" }}
+        >
           <Image
             src="/images/logo-compudata.png"
             className="h-8"
             alt="Compudata Logo"
             fill
-            style={{objectFit: 'contain'}}
+            style={{ objectFit: "contain" }}
             sizes="180px"
           />
         </div>
@@ -29,9 +32,10 @@ export default Navbar;
 const Sections = () => {
   return (
     <ul className="font-medium flex flex-col p-4 md:bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:p-0">
-      {SECTIONS.map(({ name, id, disabled }, i) => (
-        <Label key={i} name={name} id={id} disabled={disabled} />
-      ))}
+      {SECTIONS.map(({ name, id, disabled, isSplitter }, i) => {
+        if (isSplitter) return null;
+        return <Label key={i} name={name} id={id} disabled={disabled} />;
+      })}
     </ul>
   );
 };
@@ -73,7 +77,9 @@ const Label = ({ name, id, disabled }: LabelProps) => {
     <li>
       <a
         href={`#${id}`}
-        className={`font-bold block py-2 px-3 text-white rounded md:hover:bg-transparent md:p-0 ${disabled && "opacity-50 cursor-not-allowed"}`}
+        className={`font-bold block py-2 px-3 text-white rounded md:hover:bg-transparent md:p-0 ${
+          disabled && "opacity-50 cursor-not-allowed"
+        }`}
         aria-current="page"
       >
         {name}
